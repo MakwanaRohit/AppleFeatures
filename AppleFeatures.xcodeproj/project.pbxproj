@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		93A120002B42C18200AF5284 /* MyStoreKit.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93A11FFF2B42C18200AF5284 /* MyStoreKit.swift */; };
+		93A120032B42C25700AF5284 /* StoreKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 93A120022B42C25700AF5284 /* StoreKit.framework */; };
 		93B71F292B417A870090DFA8 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93B71F282B417A870090DFA8 /* AppDelegate.swift */; };
 		93B71F2B2B417A870090DFA8 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93B71F2A2B417A870090DFA8 /* SceneDelegate.swift */; };
 		93B71F2D2B417A870090DFA8 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93B71F2C2B417A870090DFA8 /* ViewController.swift */; };
@@ -18,6 +20,9 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		93A11FFF2B42C18200AF5284 /* MyStoreKit.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyStoreKit.swift; sourceTree = "<group>"; };
+		93A120022B42C25700AF5284 /* StoreKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = StoreKit.framework; path = System/Library/Frameworks/StoreKit.framework; sourceTree = SDKROOT; };
+		93A120042B42C28700AF5284 /* LocalStore.storekit */ = {isa = PBXFileReference; lastKnownFileType = text; path = LocalStore.storekit; sourceTree = "<group>"; };
 		93B71F252B417A870090DFA8 /* AppleFeatures.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = AppleFeatures.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		93B71F282B417A870090DFA8 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		93B71F2A2B417A870090DFA8 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -36,17 +41,27 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				93A120032B42C25700AF5284 /* StoreKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		93A120012B42C25700AF5284 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				93A120022B42C25700AF5284 /* StoreKit.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		93B71F1C2B417A870090DFA8 = {
 			isa = PBXGroup;
 			children = (
 				93B71F272B417A870090DFA8 /* AppleFeatures */,
 				93B71F262B417A870090DFA8 /* Products */,
+				93A120012B42C25700AF5284 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -61,8 +76,10 @@
 		93B71F272B417A870090DFA8 /* AppleFeatures */ = {
 			isa = PBXGroup;
 			children = (
+				93A120042B42C28700AF5284 /* LocalStore.storekit */,
 				93B71F3E2B417B6C0090DFA8 /* AppleFeatures.entitlements */,
 				93B71F282B417A870090DFA8 /* AppDelegate.swift */,
+				93A11FFF2B42C18200AF5284 /* MyStoreKit.swift */,
 				93B71F2A2B417A870090DFA8 /* SceneDelegate.swift */,
 				93B71F2C2B417A870090DFA8 /* ViewController.swift */,
 				93B71F3C2B417ACE0090DFA8 /* ViewController+ApplePay.swift */,
@@ -148,6 +165,7 @@
 			files = (
 				93B71F2D2B417A870090DFA8 /* ViewController.swift in Sources */,
 				93B71F292B417A870090DFA8 /* AppDelegate.swift in Sources */,
+				93A120002B42C18200AF5284 /* MyStoreKit.swift in Sources */,
 				93B71F3D2B417ACE0090DFA8 /* ViewController+ApplePay.swift in Sources */,
 				93B71F2B2B417A870090DFA8 /* SceneDelegate.swift in Sources */,
 				93B71F402B417C560090DFA8 /* ViewController+AppleLogin.swift in Sources */,

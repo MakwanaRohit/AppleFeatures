@@ -28,5 +28,9 @@ final class ViewController: UIViewController {
     @IBAction private func loginWithApple(_ sender: UIButton) {
         handleAuthorizationAppleID()
     }
+    
+    @IBAction private func inAppPurchaseAction(_ sender: UIButton) {
+        MyStoreKit.shared.fetchProducts()
+    }
 }
 

@@ -7,11 +7,14 @@
 
 import UIKit
 import AuthenticationServices
+import StoreKit
 
 @main
 class AppDelegate: UIResponder, UIApplicationDelegate {
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
+        
+        SKPaymentQueue.default().add(self)
         
         let currentUserIdentifier = "" // Fetch from Keychain
 
@@ -48,3 +51,26 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
 }
 
+
+/*
+ Transactions can happen outside your App. Say your user changes their subscription type in the system settings, or your deferred transaction was approved by the user’s parents, you won’t be able to tell unless you are expecting them. For that reason, always, in the AppDelegate, at the start of your app, subscribe the app to the PaymentQueue. This way you will make sure you won’t miss any event.
+ */
+
+extension AppDelegate: SKPaymentTransactionObserver {
+    func paymentQueue(_ queue: SKPaymentQueue, updatedTransactions transactions: [SKPaymentTransaction]) {
+        for transaction in transactions {
+            switch transaction.transactionState {
+            case .failed:
+                queue.finishTransaction(transaction)
+                print("Transaction Failed \(transaction)")
+            case .purchased, .restored:
+                queue.finishTransaction(transaction)
+                print("Transaction purchased or restored: \(transaction)")
+            case .deferred, .purchasing:
+                print("Transaction in progress: \(transaction)")
+            @unknown default:
+                break
+            }
+        }
+    }
+}

@@ -18,7 +18,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="TK2-3p-9VE">
-                                <rect key="frame" x="119.66666666666667" y="381.66666666666669" width="153.66666666666663" height="88.666666666666686"/>
+                                <rect key="frame" x="119.66666666666667" y="354.66666666666669" width="153.66666666666663" height="143"/>
                                 <subviews>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qif-Gi-4yn">
                                         <rect key="frame" x="0.0" y="0.0" width="153.66666666666666" height="34.333333333333336"/>
@@ -34,6 +34,14 @@
                                         <buttonConfiguration key="configuration" style="plain" title="Login With Apple"/>
                                         <connections>
                                             <action selector="loginWithApple:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Sb0-nu-ijH"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ZeY-EV-k4i">
+                                        <rect key="frame" x="0.0" y="108.66666666666663" width="153.66666666666666" height="34.333333333333343"/>
+                                        <state key="normal" title="Button"/>
+                                        <buttonConfiguration key="configuration" style="plain" title="In App Purchase"/>
+                                        <connections>
+                                            <action selector="inAppPurchaseAction:" destination="BYZ-38-t0r" eventType="touchUpInside" id="5vQ-qc-y6o"/>
                                         </connections>
                                     </button>
                                 </subviews>
